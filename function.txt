@@ -1,0 +1,16 @@
+### START FUNCTION
+def word_splitter(df):
+    # your code here
+    tweets=df['Tweets'].to_list()
+    split_tweets = []
+    for tweet in tweets:
+        split_tweets.append(tweet.split())
+    for a_list in split_tweets:
+        for tweet in a_list:
+            tweet.lower()
+    
+    print(split_tweets)
+    
+    #df["Split_tweets"]= split_tweets
+    return df
+### END FUNCTION
